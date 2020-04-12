@@ -1,11 +1,27 @@
 # lru-autocompleter
 
-A thread-safe search autocompletion library that uses an LRU cache.
+A thread-safe autocompletion library backed by a LRU cache.
+
+## Usage
+
+See example.py 
+
+```python3
+from autocomplete import Autocompleter
+
+capacity = 10000
+phrases = ['autocomplete', 'autocompletion', 'autocompleter', 'autocompletion library']
+frequencies = [120, 100, 30, 200]
+autocompleter = Autocompleter(capacity, phrases, frequencies)
+
+autocompleter.search('auto', 4)
+#  ['autocompletion library', 'autocomplete', 'autocompletion', 'autocompleter']
+```
 
 ## Contributing
 
 PRs, Bug Reports, Feature Requests are welcome via Github. 
-
+`python3 -m unittest` must pass
 
 ## Authors
 
