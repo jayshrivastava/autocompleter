@@ -6,6 +6,7 @@ A thread-safe autocompletion library backed by a LRU cache.
 
 See example.py 
 
+### Searching and Inserting
 ```python3
 from autocomplete import Autocompleter
 
@@ -16,6 +17,10 @@ autocompleter = Autocompleter(capacity, phrases, frequencies)
 
 autocompleter.search('auto', 4)
 #  ['autocompletion library', 'autocomplete', 'autocompletion', 'autocompleter']
+
+autocompleter.insert("autocomplete", 2)
+autocompleter.search('auto', 4)
+#  ['autocomplete', 'autocompletion library', 'autocompletion', 'autocompleter']
 ```
 
 ## Contributing
