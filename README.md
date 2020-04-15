@@ -1,4 +1,4 @@
-# lru-autocompleter
+# easy-autocompleter
 
 A thread-safe text autocompletion library. 
 
